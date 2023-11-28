@@ -2,9 +2,34 @@
 <html>
 <head>
     <tittle>My Simple HTML Page</tittle>
+    <style>
+
+    </style>
 </head>
 <body>
-    <h1>Haallo World!</h1>
-    <p>This is a new paragraph</p>
+    <script>
+        const bookData = {
+                            "Books":
+                    [
+                        {
+                            "title" : "The Great Gatsby", "author": "F. Scott Fitzgerald",
+                            "publication Year" : 1925, "genres" : ["Fiction", "Classics"]
+                        },    
+                        {
+                            "title" : "To Kill a Mockingbird", "author" : "Harper Lee", 
+                            "publication Year" : 1960, "genres": ["Fiction", "Coming-of-Age"] 
+                        }
+                    ]
+        };
+
+        console.log(bookData.Books[0].title);
+        console.log(booksData[1].author);
+        console.log(booksData[0].genres, booksData[1].genres);
+
+        bookData.Books.forEach(book =>{
+            console.log(book.subjects);
+        })
+
+    </script>
 </body>
 </html>
