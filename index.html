@@ -1,34 +1,54 @@
 <!DOCTYPE html> 
 <html>
 <head>
-    <tittle>My Simple HTML Page</tittle>
+    <title>JSON pesyen</title>
     <style>
 
+        body{
+            background-color: lightskyblue;
+        }
+
+        #demo{
+            font-size: 30px;
+            font-weight: lighter;
+            color: darkviolet;
+        }
+
+        #demo1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: lighter;
+            color: rgb(28, 109, 109);
+        }
+
+        #demo3{
+            font-size: x-large;
+        }
     </style>
 </head>
 <body>
+
+    <p id="demo">hye</p>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
     <script>
         const bookData = {
                             "Books":
                     [
                         {
                             "title" : "The Great Gatsby", "author": "F. Scott Fitzgerald",
-                            "publication Year" : 1925, "genres" : ["Fiction", "Classics"]
+                            "publication Year" : 1925, "genres" : ["Fiction", " Classics"]
                         },    
                         {
                             "title" : "To Kill a Mockingbird", "author" : "Harper Lee", 
-                            "publication Year" : 1960, "genres": ["Fiction", "Coming-of-Age"] 
+                            "publication Year" : 1960, "genres": [" Fiction", " Coming-of-Age"] 
                         }
                     ]
         };
 
-        console.log(bookData.Books[0].title);
-        console.log(booksData[1].author);
-        console.log(booksData[0].genres, booksData[1].genres);
-
-        bookData.Books.forEach(book =>{
-            console.log(book.subjects);
-        })
+        document.getElementById("demo").innerHTML = bookData.Books[0].title;
+        document.getElementById("demo1").innerHTML = bookData.Books[1].author;
+        document.getElementById("demo3").innerHTML = bookData.Books[0].genres.concat(bookData.Books[1].genres);
 
     </script>
 </body>
